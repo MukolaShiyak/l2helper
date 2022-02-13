@@ -1,0 +1,4 @@
+#Thu Feb 03 13:50:49 EET 2022
+base.0=D\:\\development2\\projects\\l2helper_v2\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
