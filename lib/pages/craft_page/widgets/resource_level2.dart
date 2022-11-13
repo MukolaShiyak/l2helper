@@ -2,26 +2,44 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:l2helper_v2/models/resource_model.dart';
+import 'package:l2helper_v2/pages/craft_page/craft_page.dart';
 import 'package:l2helper_v2/pages/craft_page/widgets/resource_level3.dart';
+import 'package:l2helper_v2/utility/shared_functions.dart';
 
 class ResourceLvl2 extends StatefulWidget {
-  final ResouceModel resource;
-  final ResouceModel secondResource;
+  final ResouceModel resource1lvl;
+  ResouceModel secondResource;
   final int count;
-  const ResourceLvl2({
-    Key? key,
-    required this.count,
-    required this.resource,
-    required this.secondResource,
-  }) : super(key: key);
+  final void Function({
+    required BuildContext context2,
+    ResouceModel? resouceModel1lvl,
+    ResouceModel? resouceModel2lvl,
+    ResouceModel? resouceModel3lvl,
+    ResouceModel? resouceModel4lvl,
+    required ResourceLevel enumLvl,
+  }) saveToHydrate;
+  final void Function({required ResouceModel resouceModel})
+      changeSecondLvlComplete;
+  ResourceLvl2(
+      {Key? key,
+      required this.count,
+      required this.resource1lvl,
+      required this.secondResource,
+      required this.saveToHydrate,
+      required this.changeSecondLvlComplete})
+      : super(key: key);
 
   @override
   _ResourceLvl2State createState() => _ResourceLvl2State();
 }
 
 class _ResourceLvl2State extends State<ResourceLvl2> {
-  bool _showThirdResouces = false;
   final _formattedNumber = NumberFormat.decimalPattern();
+  void _changeCompleteStatus({required ResouceModel resouceModel}) {
+    widget.secondResource = resouceModel;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,30 +51,54 @@ class _ResourceLvl2State extends State<ResourceLvl2> {
             onTap: widget.secondResource.resources != null
                 ? () {
                     setState(() {
-                      _showThirdResouces = !_showThirdResouces;
+                      if (widget.secondResource.showNextResourceLvl != null) {
+                        widget.secondResource.showNextResourceLvl =
+                            !widget.secondResource.showNextResourceLvl!;
+                      }
                     });
+                    widget.saveToHydrate(
+                      context2: context,
+                      resouceModel1lvl: widget.resource1lvl,
+                      resouceModel2lvl: widget.secondResource,
+                      enumLvl: ResourceLevel.second,
+                    );
                   }
                 : null,
             child: Container(
-              color:
-                  widget.resource.isComplete || widget.secondResource.isComplete
-                      ? Colors.green[200]
-                      : null,
+              // color: widget.resource1lvl.isComplete ||
+              //         widget.secondResource.isComplete
+              //     ? Colors.green[200]
+              //     : null,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
-                      Image.asset(widget.secondResource.image),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(25.r),
+                        child: Image.asset(widget.secondResource.image),
+                      ),
                       SizedBox(width: 5.w),
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
                         onTap: () {
-                          if (widget.secondResource.isComplete == null ||
-                              widget.resource.isComplete) return;
+                          if (widget.resource1lvl.isComplete) return;
                           widget.secondResource.isComplete =
                               !widget.secondResource.isComplete;
+                          if (isChildsOfThirdResourceCompleted(
+                              resourceLvl: widget.resource1lvl)) {
+                            widget.resource1lvl.isComplete = true;
+                            widget.changeSecondLvlComplete(
+                                resouceModel: widget.resource1lvl);
+                            setState(() {});
+                          }
                           setState(() {});
+                          widget.saveToHydrate(
+                            context2: context,
+                            resouceModel1lvl: widget.resource1lvl,
+                            resouceModel2lvl: widget.secondResource,
+                            enumLvl: ResourceLevel.second,
+                          );
                         },
                         child: Container(
                           height: 30.h,
@@ -64,11 +106,14 @@ class _ResourceLvl2State extends State<ResourceLvl2> {
                           child: Text(
                             widget.secondResource.title,
                             style: TextStyle(
-                                decoration: widget.secondResource.isComplete ||
-                                        widget.resource.isComplete
-                                    ? TextDecoration.lineThrough
-                                    : TextDecoration.none,
-                                decorationThickness: 2.85),
+                              fontSize: 20.sp,
+                              decoration: widget.secondResource.isComplete ||
+                                      widget.resource1lvl.isComplete
+                                  ? TextDecoration.lineThrough
+                                  : TextDecoration.none,
+                              decorationThickness: 2.85,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
@@ -81,20 +126,35 @@ class _ResourceLvl2State extends State<ResourceLvl2> {
                     child: Row(
                       children: [
                         Text(
-                          '${_formattedNumber.format(int.parse(widget.secondResource.quantity) * int.parse(widget.resource.quantity) * widget.count)}',
+                          '${_formattedNumber.format(int.parse(widget.secondResource.quantity) * int.parse(widget.resource1lvl.quantity) * widget.count)}',
                           style: TextStyle(
-                              decoration: widget.secondResource.isComplete ||
-                                      widget.resource.isComplete
-                                  ? TextDecoration.lineThrough
-                                  : TextDecoration.none,
-                              decorationThickness: 2.85),
+                            fontSize: 20.sp,
+                            decoration: widget.secondResource.isComplete ||
+                                    widget.resource1lvl.isComplete
+                                ? TextDecoration.lineThrough
+                                : TextDecoration.none,
+                            decorationThickness: 2.85,
+                            color: Colors.white,
+                          ),
                         ),
                         if (widget.secondResource.resources != null &&
-                            !_showThirdResouces) ...[
-                          const Icon(Icons.arrow_drop_down),
+                            (widget.secondResource.showNextResourceLvl !=
+                                    null &&
+                                !widget
+                                    .secondResource.showNextResourceLvl!)) ...[
+                          const Icon(
+                            Icons.arrow_drop_down,
+                            color: Colors.white,
+                          ),
                         ] else if (widget.secondResource.resources != null &&
-                            _showThirdResouces) ...[
-                          const Icon(Icons.arrow_drop_up),
+                            (widget.secondResource.showNextResourceLvl !=
+                                    null &&
+                                widget
+                                    .secondResource.showNextResourceLvl!)) ...[
+                          const Icon(
+                            Icons.arrow_drop_up,
+                            color: Colors.white,
+                          ),
                         ],
                       ],
                     ),
@@ -105,13 +165,18 @@ class _ResourceLvl2State extends State<ResourceLvl2> {
           ),
         ),
         // третій ресурс
-        if (widget.secondResource.resources != null && _showThirdResouces)
+        if (widget.secondResource.resources != null &&
+            (widget.secondResource.showNextResourceLvl != null &&
+                widget.secondResource.showNextResourceLvl!))
           for (var thirdResouce in widget.secondResource.resources!)
             ResourceLvl3(
               count: widget.count,
-              resource: widget.resource,
+              firstResource: widget.resource1lvl,
               secondResource: widget.secondResource,
               thirdResource: thirdResouce,
+              saveToHydrate: widget.saveToHydrate,
+              changeSecondLvlComplete: _changeCompleteStatus,
+              changeFirstLvlComplete: widget.changeSecondLvlComplete,
             ),
       ],
     );

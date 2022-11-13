@@ -19,12 +19,14 @@ List<ResouceModel> draconicBow = [
     quantity: '4',
     title: 'Warsmith Holder',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Maestro_Holder.jpg',
         quantity: '2',
         title: 'Maestro Holder',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Mold_Hardener.jpg',
@@ -43,6 +45,7 @@ List<ResouceModel> draconicBow = [
             quantity: '10',
             title: 'Varnish of Purity',
             isComplete: false,
+            showNextResourceLvl: false,
             resources: [
               ResouceModel(
                 image: 'images/Stone_of_Purity.jpg',
@@ -85,6 +88,7 @@ List<ResouceModel> draconicBow = [
     quantity: '375',
     title: 'Mithril Alloy',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Mithril_Ore.jpg',
@@ -97,6 +101,7 @@ List<ResouceModel> draconicBow = [
         quantity: '1',
         title: 'Varnish of Purity',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Stone_of_Purity.jpg',
@@ -123,6 +128,7 @@ List<ResouceModel> draconicBow = [
         quantity: '2',
         title: 'Steel',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Iron_Ore.jpg',
@@ -145,6 +151,7 @@ List<ResouceModel> draconicBow = [
     quantity: '75',
     title: 'Synthetic Cokes',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Oriharukon_Ore.jpg',
@@ -157,6 +164,7 @@ List<ResouceModel> draconicBow = [
         quantity: '3',
         title: 'Cokes',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/coal.png',
@@ -179,6 +187,7 @@ List<ResouceModel> draconicBow = [
     quantity: '150',
     title: 'Durable Metal Plate',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Metallic_Thread.jpg',
@@ -211,12 +220,14 @@ List<ResouceModel> draconicBow = [
     quantity: '43',
     title: 'Gemstone S',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/green_seal_stone.jpg',
         quantity: '20000',
         title: 'Green Seal Stone',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/ancient-adena.png',
@@ -238,108 +249,126 @@ List<ResouceModel> draconicBowLowRes = [
     quantity: '1',
     title: 'Recipe: Draconic Bow',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/shaft.jpg',
     quantity: '17',
     title: 'Draconic Bow Shaft',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/dmp.jpg',
     quantity: '150',
     title: 'Durable Metal Plate',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Oriharukon_Ore.jpg',
     quantity: '75',
     title: 'Oriharukon Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mithril_Ore.jpg',
     quantity: '375',
     title: 'Mithril Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Stone_of_Purity.jpg',
     quantity: '455',
     title: 'Stone of Purity',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Hardener.jpg',
     quantity: '80',
     title: 'Mold Hardener',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Lubricant.jpg',
     quantity: '80',
     title: 'Mold Lubricant',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Glue.jpg',
     quantity: '40',
     title: 'Mold Glue',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Thread.jpg',
     quantity: '80',
     title: 'Thread',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Coarse_Bone_Powder.jpg',
     quantity: '1365',
     title: 'Coarse Bone Powder',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Iron_Ore.jpg',
     quantity: '3750',
     title: 'Iron Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Varnish.jpg',
     quantity: '5115',
     title: 'Varnish',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/coal.png',
     quantity: '675',
     title: 'coal',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/charcoal.png',
     quantity: '675',
     title: 'Charcoal',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/enria.jpg',
     quantity: '75',
     title: 'Enria',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Scry.jpg',
     quantity: '212',
     title: 'Crystal S-Grade',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/ancient-adena.png',
     quantity: '4300000',
     title: 'Ancient Adena',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
 ];
 
@@ -363,12 +392,14 @@ List<ResouceModel> arcanaMace = [
     quantity: '4',
     title: 'Warsmith Holder',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Maestro_Holder.jpg',
         quantity: '2',
         title: 'Maestro Holder',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Mold_Hardener.jpg',
@@ -387,6 +418,7 @@ List<ResouceModel> arcanaMace = [
             quantity: '10',
             title: 'Varnish of Purity',
             isComplete: false,
+            showNextResourceLvl: false,
             resources: [
               ResouceModel(
                 image: 'images/Stone_of_Purity.jpg',
@@ -429,6 +461,7 @@ List<ResouceModel> arcanaMace = [
     quantity: '154',
     title: 'Mithril Alloy',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Mithril_Ore.jpg',
@@ -441,6 +474,7 @@ List<ResouceModel> arcanaMace = [
         quantity: '1',
         title: 'Varnish of Purity',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Stone_of_Purity.jpg',
@@ -467,6 +501,7 @@ List<ResouceModel> arcanaMace = [
         quantity: '2',
         title: 'Steel',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Iron_Ore.jpg',
@@ -489,6 +524,7 @@ List<ResouceModel> arcanaMace = [
     quantity: '154',
     title: 'Synthetic Cokes',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Oriharukon_Ore.jpg',
@@ -501,6 +537,7 @@ List<ResouceModel> arcanaMace = [
         quantity: '3',
         title: 'Cokes',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/coal.png',
@@ -523,6 +560,7 @@ List<ResouceModel> arcanaMace = [
     quantity: '308',
     title: 'Durable Metal Plate',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Metallic_Thread.jpg',
@@ -555,12 +593,14 @@ List<ResouceModel> arcanaMace = [
     quantity: '43',
     title: 'Gemstone S',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/green_seal_stone.jpg',
         quantity: '20000',
         title: 'Green Seal Stone',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/ancient-adena.png',
@@ -581,108 +621,126 @@ List<ResouceModel> arcanaMaceLowRes = [
     quantity: '1',
     title: 'Recipe: Arcana Mace',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/amhead.jpg',
     quantity: '17',
     title: 'Arcana Mace Head',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/dmp.jpg',
     quantity: '308',
     title: 'Durable Metal Plate',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Oriharukon_Ore.jpg',
     quantity: '154',
     title: 'Oriharukon Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mithril_Ore.jpg',
     quantity: '154',
     title: 'Mithril Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Stone_of_Purity.jpg',
     quantity: '234',
     title: 'Stone of Purity',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Hardener.jpg',
     quantity: '80',
     title: 'Mold Hardener',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Lubricant.jpg',
     quantity: '80',
     title: 'Mold Lubricant',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Glue.jpg',
     quantity: '40',
     title: 'Mold Glue',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Thread.jpg',
     quantity: '80',
     title: 'Thread',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Coarse_Bone_Powder.jpg',
     quantity: '702',
     title: 'Coarse Bone Powder',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Iron_Ore.jpg',
     quantity: '1540',
     title: 'Iron Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Varnish.jpg',
     quantity: '2242',
     title: 'Varnish',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/coal.png',
     quantity: '1386',
     title: 'coal',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/charcoal.png',
     quantity: '1386',
     title: 'Charcoal',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/enria.jpg',
     quantity: '77',
     title: 'Enria',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Scry.jpg',
     quantity: '211',
     title: 'Crystal S-Grade',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/ancient-adena.png',
     quantity: '4300000',
     title: 'Ancient Adena',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
 ];
 
@@ -705,12 +763,14 @@ List<ResouceModel> heavensDivider = [
     quantity: '4',
     title: 'Warsmith Holder',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Maestro_Holder.jpg',
         quantity: '2',
         title: 'Maestro Holder',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Mold_Hardener.jpg',
@@ -729,6 +789,7 @@ List<ResouceModel> heavensDivider = [
             quantity: '10',
             title: 'Varnish of Purity',
             isComplete: false,
+            showNextResourceLvl: false,
             resources: [
               ResouceModel(
                 image: 'images/Stone_of_Purity.jpg',
@@ -771,6 +832,7 @@ List<ResouceModel> heavensDivider = [
     quantity: '292',
     title: 'Mithril Alloy',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Mithril_Ore.jpg',
@@ -783,6 +845,7 @@ List<ResouceModel> heavensDivider = [
         quantity: '1',
         title: 'Varnish of Purity',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Stone_of_Purity.jpg',
@@ -809,6 +872,7 @@ List<ResouceModel> heavensDivider = [
         quantity: '2',
         title: 'Steel',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/Iron_Ore.jpg',
@@ -831,6 +895,7 @@ List<ResouceModel> heavensDivider = [
     quantity: '146',
     title: 'Synthetic Cokes',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Oriharukon_Ore.jpg',
@@ -843,6 +908,7 @@ List<ResouceModel> heavensDivider = [
         quantity: '3',
         title: 'Cokes',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/coal.png',
@@ -865,6 +931,7 @@ List<ResouceModel> heavensDivider = [
     quantity: '146',
     title: 'Durable Metal Plate',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/Metallic_Thread.jpg',
@@ -897,12 +964,14 @@ List<ResouceModel> heavensDivider = [
     quantity: '43',
     title: 'Gemstone S',
     isComplete: false,
+    showNextResourceLvl: false,
     resources: [
       ResouceModel(
         image: 'images/green_seal_stone.jpg',
         quantity: '20000',
         title: 'Green Seal Stone',
         isComplete: false,
+        showNextResourceLvl: false,
         resources: [
           ResouceModel(
             image: 'images/ancient-adena.png',
@@ -923,107 +992,125 @@ List<ResouceModel> heavensDividerLowRes = [
     quantity: '1',
     title: 'Recipe: Heavens Divider',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/blade.jpg',
     quantity: '17',
     title: 'Heavens Divider Edge',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/dmp.jpg',
     quantity: '146',
     title: 'Durable Metal Plate',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Oriharukon_Ore.jpg',
     quantity: '146',
     title: 'Oriharukon Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mithril_Ore.jpg',
     quantity: '292',
     title: 'Mithril Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Stone_of_Purity.jpg',
     quantity: '372',
     title: 'Stone of Purity',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Hardener.jpg',
     quantity: '80',
     title: 'Mold Hardener',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Lubricant.jpg',
     quantity: '80',
     title: 'Mold Lubricant',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Mold_Glue.jpg',
     quantity: '40',
     title: 'Mold Glue',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Thread.jpg',
     quantity: '80',
     title: 'Thread',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Coarse_Bone_Powder.jpg',
     quantity: '1116',
     title: 'Coarse Bone Powder',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Iron_Ore.jpg',
     quantity: '2920',
     title: 'Iron Ore',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Varnish.jpg',
     quantity: '4036',
     title: 'Varnish',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/coal.png',
     quantity: '1314',
     title: 'coal',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/charcoal.png',
     quantity: '1314',
     title: 'Charcoal',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/enria.jpg',
     quantity: '146',
     title: 'Enria',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/Scry.jpg',
     quantity: '211',
     title: 'Crystal S-Grade',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
   ResouceModel(
     image: 'images/ancient-adena.png',
     quantity: '4300000',
     title: 'Ancient Adena',
     isComplete: false,
+    showNextResourceLvl: null,
   ),
 ];
