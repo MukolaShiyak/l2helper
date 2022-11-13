@@ -4,6 +4,14 @@ import 'package:l2helper_v2/cubit/craft_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:l2helper_v2/routes.dart';
 
+enum BodyType {
+  sedan,
+  hatchBack,
+  universal,
+  crossover,
+  any,
+}
+
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -17,11 +25,6 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    // print(BlocProvider.of<CraftCubit>(context).state.count);
-    // print(context.read<CraftCubit>().state.count);
-    // print(context.read<CraftCubit>().state.title);
-    // print(_title);
-    // print(BlocProvider.of<CraftCubit>(context).state.title);
     return BlocListener<CraftCubit, CraftState>(
       listener: (context, state) {
         if (state.title.isNotEmpty && _title != state.title) {
@@ -124,6 +127,54 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     showDialog(
+              //         context: context,
+              //         builder: (context) {
+              //           final List<Map<String, dynamic>> _map = [
+              //             for (var map in _mapForBodies) {...map}
+              //           ];
+              //           return AlertDialog(
+              //             title: Text('title'),
+              //             content:
+              //                 StatefulBuilder(builder: (context, _setstate) {
+              //               return Column(
+              //                 children: [
+              //                   for (int i = 0; i < _map.length; i++)
+              //                     CheckboxListTile(
+              //                       value: _map[i]['isSelected'],
+              //                       onChanged: (value) {
+              //                         _map[i]['isSelected'] = value;
+
+              //                         _setstate(() {});
+              //                       },
+              //                       title: Text(_map[i]['name'] as String),
+              //                     )
+              //                 ],
+              //               );
+              //             }),
+              //             actions: [
+              //               TextButton(
+              //                 onPressed: () {
+              //                   _mapForBodies = _map;
+
+              //                   Navigator.of(context).pop();
+              //                 },
+              //                 child: Text('Ok'),
+              //               ),
+              //               TextButton(
+              //                 onPressed: () {
+              //                   Navigator.of(context).pop();
+              //                 },
+              //                 child: Text('Cancel'),
+              //               )
+              //             ],
+              //           );
+              //         });
+              //   },
+              //   child: Text('dialog'),
+              // ),
             ],
           ),
         ),

@@ -87,6 +87,38 @@ class _ResourceLvl1State extends State<ResourceLvl1> {
 
                           widget.resource.isComplete =
                               !widget.resource.isComplete;
+                          if (widget.resource.resources != null) {
+                            for (int i = 0;
+                                i < widget.resource.resources!.length;
+                                i++) {
+                              ResouceModel second =
+                                  widget.resource.resources![i];
+                              if (second.resources != null) {
+                                for (int i = 0;
+                                    i < second.resources!.length;
+                                    i++) {
+                                  ResouceModel third = second.resources![i];
+                                  if (third.resources != null) {
+                                    for (int i = 0;
+                                        i < third.resources!.length;
+                                        i++) {
+                                      ResouceModel fourth = third.resources![i];
+                                      fourth.isComplete =
+                                          widget.resource.isComplete;
+                                      third.resources!.removeAt(i);
+                                      third.resources!.insert(i, fourth);
+                                    }
+                                  }
+                                  third.isComplete = widget.resource.isComplete;
+                                  second.resources!.removeAt(i);
+                                  second.resources!.insert(i, third);
+                                }
+                              }
+                              second.isComplete = widget.resource.isComplete;
+                              widget.resource.resources!.removeAt(i);
+                              widget.resource.resources!.insert(i, second);
+                            }
+                          }
                           setState(() {});
                           widget.saveToHydrate(
                             context2: context,

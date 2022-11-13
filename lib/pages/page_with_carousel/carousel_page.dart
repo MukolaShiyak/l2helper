@@ -33,6 +33,18 @@ class _CarouselPageState extends State<CarouselPage> {
       resources: heavensDivider,
       lowResources: heavensDividerLowRes,
     ),
+    CarouselItem(
+      title: "Dark Legion's Edge",
+      image: 'images/dleHD.jpg',
+      resources: darkLegion,
+      lowResources: darkLegionLowRes,
+    ),
+    CarouselItem(
+      title: "Tallum blade",
+      image: 'images/tallumHD.jpg',
+      resources: tallumBlade,
+      lowResources: tallumBladeLowRes,
+    ),
   ];
   @override
   Widget build(BuildContext context) {

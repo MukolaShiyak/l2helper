@@ -40,6 +40,10 @@ class _ResourceLvl2State extends State<ResourceLvl2> {
     setState(() {});
   }
 
+  void _onTap({required void Function() onTap}) {
+    onTap();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -82,12 +86,42 @@ class _ResourceLvl2State extends State<ResourceLvl2> {
                       GestureDetector(
                         behavior: HitTestBehavior.opaque,
                         onTap: () {
-                          if (widget.resource1lvl.isComplete) return;
+                          // if (widget.resource1lvl.isComplete) return;
                           widget.secondResource.isComplete =
                               !widget.secondResource.isComplete;
+                          if (widget.secondResource.resources != null) {
+                            for (int i = 0;
+                                i < widget.secondResource.resources!.length;
+                                i++) {
+                              ResouceModel thirdres =
+                                  widget.secondResource.resources![i];
+                              if (thirdres.resources != null) {
+                                for (int i = 0;
+                                    i < thirdres.resources!.length;
+                                    i++) {
+                                  ResouceModel fourthRes =
+                                      thirdres.resources![i];
+                                  fourthRes.isComplete =
+                                      widget.secondResource.isComplete;
+                                  thirdres.resources!.removeAt(i);
+                                  thirdres.resources!.insert(i, fourthRes);
+                                }
+                              }
+                              thirdres.isComplete =
+                                  widget.secondResource.isComplete;
+                              widget.secondResource.resources!.removeAt(i);
+                              widget.secondResource.resources!
+                                  .insert(i, thirdres);
+                            }
+                          }
                           if (isChildsOfThirdResourceCompleted(
                               resourceLvl: widget.resource1lvl)) {
                             widget.resource1lvl.isComplete = true;
+                            widget.changeSecondLvlComplete(
+                                resouceModel: widget.resource1lvl);
+                            setState(() {});
+                          } else {
+                            widget.resource1lvl.isComplete = false;
                             widget.changeSecondLvlComplete(
                                 resouceModel: widget.resource1lvl);
                             setState(() {});
@@ -177,6 +211,7 @@ class _ResourceLvl2State extends State<ResourceLvl2> {
               saveToHydrate: widget.saveToHydrate,
               changeSecondLvlComplete: _changeCompleteStatus,
               changeFirstLvlComplete: widget.changeSecondLvlComplete,
+              // onTap: _onTap,
             ),
       ],
     );
