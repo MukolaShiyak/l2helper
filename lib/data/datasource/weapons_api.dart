@@ -1,6 +1,6 @@
-import 'package:dio/dio.dart';
-
 import 'dart:convert' as cv;
+
+import 'package:dio/dio.dart';
 
 import 'package:l2helper_v2/data/constants.dart';
 import 'package:l2helper_v2/data/exception.dart';

@@ -18,13 +18,13 @@ class CarouselPage extends StatefulWidget {
 
 class _CarouselPageState extends State<CarouselPage> {
   int _currentPageIndex = 0;
-  Future<List<Weapon>>? _weaponsFuture;
+  Future<List<Weapon>>? _weapons;
   final CarouselController buttonCarouselController = CarouselController();
 
   @override
   void initState() {
     super.initState();
-    _weaponsFuture = context.read<CraftCubit>().getWeapons();
+    _weapons = context.read<CraftCubit>().getWeapons();
   }
 
   @override
@@ -41,7 +41,7 @@ class _CarouselPageState extends State<CarouselPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FutureBuilder<List<Weapon>>(
-                  future: _weaponsFuture,
+                  future: _weapons,
                   builder: (context, snapshot) {
                     switch (snapshot.connectionState) {
                       case ConnectionState.none:

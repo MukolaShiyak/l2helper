@@ -1,0 +1,467 @@
+[
+    {
+        "imageUrl": "https://images.gamebanana.com/img/ss/mods/5bf6825c5b0d6.jpg",
+        "weaponName": "Draconic Bow",
+        "weaponResources": [
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_recipe_black_i00.png",
+                "quantity": "1",
+                "title": "Recipe: Draconic Bow",
+                "isComplete": false
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_branch_gold_i00.png",
+                "quantity": "17",
+                "title": "Draconic Bow Shaft",
+                "isComplete": false
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_blacksmiths_frame_i00.png",
+                "quantity": "4",
+                "title": "Warsmith Holder",
+                "isComplete": false,
+                "resources": [
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_lump_yellow_i00.png",
+                        "quantity": "2",
+                        "title": "Maestro Holder",
+                        "isComplete": false,
+                        "resources": [
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_reagent_blue_i00.png",
+                                "quantity": "10",
+                                "title": "Mold Hardener",
+                                "isComplete": false
+                            },
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_reagent_gold_i00.png",
+                                "quantity": "10",
+                                "title": "Mold Lubricant",
+                                "isComplete": false
+                            },
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_potion_clear_i00.png",
+                                "quantity": "10",
+                                "title": "Varnish of Purity",
+                                "isComplete": false,
+                                "resources": [
+                                    {
+                                        "image": "https://l2.dropspoil.com/data/img/etc_crystal_ball_white_i00.png",
+                                        "quantity": "1",
+                                        "title": "Stone of Purity",
+                                        "isComplete": false
+                                    },
+                                    {
+                                        "image": "https://l2.dropspoil.com/data/img/etc_powder_white_i00.png",
+                                        "quantity": "3",
+                                        "title": "Coarse Bone Powder",
+                                        "isComplete": false
+                                    },
+                                    {
+                                        "image": "https://l2.dropspoil.com/data/img/etc_pouch_yellow_i00.png",
+                                        "quantity": "3",
+                                        "title": "Varnish",
+                                        "isComplete": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_reagent_red_i00.png",
+                        "quantity": "10",
+                        "title": "Mold Glue",
+                        "isComplete": false
+                    },
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_skein_white_i00.png",
+                        "quantity": "20",
+                        "title": "Thread",
+                        "isComplete": false
+                    }
+                ]
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_lump_white_i00.png",
+                "quantity": "375",
+                "title": "Mithril Alloy",
+                "isComplete": false,
+                "resources": [
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_mithril_ore_i00.png",
+                        "quantity": "1",
+                        "title": "Mithril Ore",
+                        "isComplete": false
+                    },
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_potion_clear_i00.png",
+                        "quantity": "1",
+                        "title": "Varnish of Purity",
+                        "isComplete": false,
+                        "resources": [
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_crystal_ball_white_i00.png",
+                                "quantity": "1",
+                                "title": "Stone of Purity",
+                                "isComplete": false
+                            },
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_powder_white_i00.png",
+                                "quantity": "3",
+                                "title": "Coarse Bone Powder",
+                                "isComplete": false
+                            },
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_pouch_yellow_i00.png",
+                                "quantity": "3",
+                                "title": "Varnish",
+                                "isComplete": false
+                            }
+                        ]
+                    },
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_lump_black_i00.png",
+                        "quantity": "2",
+                        "title": "Steel",
+                        "isComplete": false,
+                        "resources": [
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_lump_gray_i00.png",
+                                "quantity": "5",
+                                "title": "Iron Ore",
+                                "isComplete": false
+                            },
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_pouch_yellow_i00.png",
+                                "quantity": "5",
+                                "title": "Varnish",
+                                "isComplete": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_synthetic_cokes_i00.png",
+                "quantity": "75",
+                "title": "Synthetic Cokes",
+                "isComplete": false,
+                "resources": [
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_oriharukon_ore_i00.png",
+                        "quantity": "1",
+                        "title": "Oriharukon Ore",
+                        "isComplete": false
+                    },
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_oil_pot_black_i00.png",
+                        "quantity": "3",
+                        "title": "Cokes",
+                        "isComplete": false,
+                        "resources": [
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_coal_i00.png",
+                                "quantity": "3",
+                                "title": "coal",
+                                "isComplete": false
+                            },
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_charcoal_i00.png",
+                                "quantity": "3",
+                                "title": "Charcoal",
+                                "isComplete": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_squares_wood_i00.png",
+                "quantity": "150",
+                "title": "Durable Metal Plate",
+                "isComplete": false,
+                "resources": [
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_skein_gray_i00.png",
+                        "quantity": "5",
+                        "title": "Metallic Thread",
+                        "isComplete": false
+                    },
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_mithril_ore_i00.png",
+                        "quantity": "5",
+                        "title": "Mithril Ore",
+                        "isComplete": false
+                    }
+                ]
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_gem_red_i00.png",
+                "quantity": "75",
+                "title": "Enria",
+                "isComplete": false
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_crystal_gold_i00.png",
+                "quantity": "212",
+                "title": "Crystal S-Grade",
+                "isComplete": false
+            },
+            {
+                "image": "https://l2.dropspoil.com/data/img/etc_bead_silver_i00.png",
+                "quantity": "43",
+                "title": "Gemstone S",
+                "isComplete": false,
+                "resources": [
+                    {
+                        "image": "https://l2.dropspoil.com/data/img/etc_wind_rune_i00.png",
+                        "quantity": "20000",
+                        "title": "Green Seal Stone",
+                        "isComplete": false,
+                        "resources": [
+                            {
+                                "image": "https://l2.dropspoil.com/data/img/etc_ancient_adena_i00.png",
+                                "quantity": "5",
+                                "title": "Ancient Adena",
+                                "isComplete": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        
+        "imageUrl": "https://l2.logu.jp/wp-content/uploads/2019/03/arcana_mace.jpg",
+        "weaponName": "Arcana Mace",
+        "weaponResources": [
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_recipe_black_i00.png",
+      "quantity": "1",
+      "title": "Recipe: Arcana Mace",
+      "isComplete": false
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_squares_gray_i00.png",
+      "quantity": "17",
+      "title": "Arcana Mace Head",
+      "isComplete": false
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_blacksmiths_frame_i00.png",
+      "quantity": "4",
+      "title": "Warsmith Holder",
+      "isComplete": false,
+      "resources": [
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_lump_yellow_i00.png",
+          "quantity": "2",
+          "title": "Maestro Holder",
+          "isComplete": false,
+          "resources": [
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_reagent_blue_i00.png",
+              "quantity": "10",
+              "title": "Mold Hardener",
+              "isComplete": false
+            },
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_reagent_gold_i00.png",
+              "quantity": "10",
+              "title": "Mold Lubricant",
+              "isComplete": false
+            },
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_potion_clear_i00.png",
+              "quantity": "10",
+              "title": "Varnish of Purity",
+              "isComplete": false,
+              "resources": [
+                {
+                  "image": "https://l2.dropspoil.com/data/img/etc_crystal_ball_white_i00.png",
+                  "quantity": "1",
+                  "title": "Stone of Purity",
+                  "isComplete": false
+                },
+                {
+                  "image": "https://l2.dropspoil.com/data/img/etc_powder_white_i00.png",
+                  "quantity": "3",
+                  "title": "Coarse Bone Powder",
+                  "isComplete": false
+                },
+                {
+                  "image": "https://l2.dropspoil.com/data/img/etc_pouch_yellow_i00.png",
+                  "quantity": "3",
+                  "title": "Varnish",
+                  "isComplete": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_reagent_red_i00.png",
+          "quantity": "10",
+          "title": "Mold Glue",
+          "isComplete": false
+        },
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_skein_white_i00.png",
+          "quantity": "20",
+          "title": "Thread",
+          "isComplete": false
+        }
+      ]
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_lump_white_i00.png",
+      "quantity": "154",
+      "title": "Mithril Alloy",
+      "isComplete": false,
+      "resources": [
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_mithril_ore_i00.png",
+          "quantity": "1",
+          "title": "Mithril Ore",
+          "isComplete": false
+        },
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_potion_clear_i00.png",
+          "quantity": "1",
+          "title": "Varnish of Purity",
+          "isComplete": false,
+          "resources": [
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_crystal_ball_white_i00.png",
+              "quantity": "1",
+              "title": "Stone of Purity",
+              "isComplete": false
+            },
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_powder_white_i00.png",
+              "quantity": "3",
+              "title": "Coarse Bone Powder",
+              "isComplete": false
+            },
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_pouch_yellow_i00.png",
+              "quantity": "3",
+              "title": "Varnish",
+              "isComplete": false
+            }
+          ]
+        },
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_lump_black_i00.png",
+          "quantity": "2",
+          "title": "Steel",
+          "isComplete": false,
+          "resources": [
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_lump_gray_i00.png",
+              "quantity": "5",
+              "title": "Iron Ore",
+              "isComplete": false
+            },
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_pouch_yellow_i00.png",
+              "quantity": "5",
+              "title": "Varnish",
+              "isComplete": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_synthetic_cokes_i00.png",
+      "quantity": "154",
+      "title": "Synthetic Cokes",
+      "isComplete": false,
+      "resources": [
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_oriharukon_ore_i00.png",
+          "quantity": "1",
+          "title": "Oriharukon Ore",
+          "isComplete": false
+        },
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_oil_pot_black_i00.png",
+          "quantity": "3",
+          "title": "Cokes",
+          "isComplete": false,
+          "resources": [
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_coal_i00.png",
+              "quantity": "3",
+              "title": "coal",
+              "isComplete": false
+            },
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_charcoal_i00.png",
+              "quantity": "3",
+              "title": "Charcoal",
+              "isComplete": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_squares_wood_i00.png",
+      "quantity": "308",
+      "title": "Durable Metal Plate",
+      "isComplete": false,
+      "resources": [
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_skein_gray_i00.png",
+          "quantity": "5",
+          "title": "Metallic Thread",
+          "isComplete": false
+        },
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_mithril_ore_i00.png",
+          "quantity": "5",
+          "title": "Mithril Ore",
+          "isComplete": false
+        }
+      ]
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_gem_red_i00.png",
+      "quantity": "77",
+      "title": "Enria",
+      "isComplete": false
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_crystal_gold_i00.png",
+      "quantity": "211",
+      "title": "Crystal S-Grade",
+      "isComplete": false
+    },
+    {
+      "image": "https://l2.dropspoil.com/data/img/etc_bead_silver_i00.png",
+      "quantity": "43",
+      "title": "Gemstone S",
+      "isComplete": false,
+      "resources": [
+        {
+          "image": "https://l2.dropspoil.com/data/img/etc_wind_rune_i00.png",
+          "quantity": "20000",
+          "title": "Green Seal Stone",
+          "isComplete": false,
+          "resources": [
+            {
+              "image": "https://l2.dropspoil.com/data/img/etc_ancient_adena_i00.png",
+              "quantity": "5",
+              "title": "Ancient Adena",
+              "isComplete": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]

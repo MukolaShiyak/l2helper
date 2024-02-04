@@ -4,8 +4,8 @@ import 'package:l2helper_v2/utils/app_colors.dart';
 
 @immutable
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final VoidCallback? onBackTap;
   final String appBarTitle;
+  final VoidCallback? onBackTap;
   const CustomAppBar({
     super.key,
     this.onBackTap,

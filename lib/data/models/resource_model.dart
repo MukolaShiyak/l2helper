@@ -67,27 +67,6 @@ class ResourceModel {
     );
   }
 
-  ResourceModel getDuplicate(bool isComplete) {
-    return ResourceModel(
-      title: title,
-      image: image,
-      quantity: quantity,
-      resources: resources,
-      isComplete: isComplete,
-    );
-  }
-
-  String showingQuantity({
-    int? parentCount,
-    required int craftCount,
-  }) {
-    if (parentCount != null) {
-      return formattedNumber
-          .format(parentCount * int.parse(quantity) * craftCount);
-    }
-    return formattedNumber.format(int.parse(quantity) * craftCount);
-  }
-
   String toJson() => cv.json.encode(toMap());
 
   factory ResourceModel.fromJson(Map<String, dynamic> map) =>

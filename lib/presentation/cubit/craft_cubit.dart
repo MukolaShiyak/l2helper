@@ -19,13 +19,9 @@ class CraftCubit extends HydratedCubit<CraftState> {
           imagePath: '',
           resouceModel: [],
         ));
-  //       {
-  //   hydrate();
-  // }
 
   Future<List<Weapon>> getWeapons() async {
     final result = await _getWeapons.repository.getWeapons();
-    print('result $result');
     return result.fold(
       (failure) {
         return [];

@@ -10,7 +10,6 @@ import 'package:l2helper_v2/data/repositories/weapons_repositories_impl.dart';
 final locator = GetIt.instance;
 
 void init() {
-  print('injector initializing');
   // bloc
   locator.registerFactory(() => CraftCubit(locator()));
 

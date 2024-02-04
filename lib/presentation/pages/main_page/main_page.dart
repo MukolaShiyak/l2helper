@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:l2helper_v2/routes.dart';
 import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
 import 'package:l2helper_v2/presentation/shared_widgets/app_bar.dart';
-// import 'package:l2helper_v2/presentation/pages/page_with_carousel/carousel_page.dart';
 import 'package:l2helper_v2/presentation/pages/main_page/widgets/main_screen_craft_card.dart';
 
 class MainPage extends StatefulWidget {
@@ -19,31 +18,15 @@ class _MainPageState extends State<MainPage> {
   int _count = 0;
   String _title = '';
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-  //     preloadImages();
-  //   });
-  // }
-
-  void preloadImages() {
-    // for (var item in CarouselPage.carouselItems) {
-    //   precacheImage(AssetImage(item.image), context);
-    // }
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocListener<CraftCubit, CraftState>(
       listener: (context, state) {
         if (state.title.isNotEmpty && _title != state.title) {
-          _title = state.title;
-          setState(() {});
+          setState(() => _title = state.title);
         }
         if (state.count != _count) {
-          _count = state.count;
-          setState(() {});
+          setState(() => _count = state.count);
         }
       },
       child: Scaffold(
@@ -59,11 +42,8 @@ class _MainPageState extends State<MainPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // ElevatedButton(
-              //   onPressed: context.read<CraftCubit>().getWeapons,
-              //   child: Text('getWeap'),
-              // ),
               if (context.read<CraftCubit>().state.title.isNotEmpty)
+                // ignore: prefer_const_constructors
                 MainScreenCraftCard(),
             ],
           ),

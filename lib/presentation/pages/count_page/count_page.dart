@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:l2helper_v2/routes.dart';
-import 'package:l2helper_v2/presentation/shared_widgets/app_bar.dart';
 import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
+import 'package:l2helper_v2/presentation/shared_widgets/app_bar.dart';
 import 'package:l2helper_v2/presentation/pages/count_page/widgets/submit_button.dart';
 import 'package:l2helper_v2/presentation/pages/count_page/widgets/quantity_text_field.dart';
 
@@ -67,7 +67,6 @@ class _QuantityPageState extends State<QuantityPage> {
         onBackTap: _onBackTap,
         appBarTitle: 'Add craft count',
       ),
-      // ),
       body: Container(
         height: 1.sh,
         width: 1.sw,

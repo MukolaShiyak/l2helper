@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 @immutable
 class QuantityTextField extends StatelessWidget {
-  final TextEditingController controller;
   final ValueSetter<int> updateQuantity;
+  final TextEditingController controller;
   const QuantityTextField({
     super.key,
     required this.controller,
