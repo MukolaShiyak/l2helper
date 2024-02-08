@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:shimmer/shimmer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:l2helper_v2/routes.dart';
 import 'package:l2helper_v2/domain/entities/resource.dart';
@@ -57,9 +59,23 @@ class CarouselItem extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(25.r),
-                child: Image.network(
-                  image,
-                  fit: BoxFit.contain,
+                child: CachedNetworkImage(
+                  imageUrl: image,
+                  placeholder: (context, url) {
+                    return Shimmer.fromColors(
+                      baseColor: Colors.grey,
+                      highlightColor: Colors.white,
+                      child: Image(
+                        image: NetworkImage(url),
+                      ),
+                    );
+                  },
+                  imageBuilder: (context, imageProvider) {
+                    return Image(
+                      image: imageProvider,
+                      fit: BoxFit.contain,
+                    );
+                  },
                 ),
               ),
             ),

@@ -41,13 +41,14 @@ dependencies:
   hydrated_bloc: ^9.0.0
   path_provider: ^2.0.11
   carousel_slider: ^4.1.1
-  # dart_json_mapper: ^2.2.5+1
   json_annotation: ^4.4.0
   dio: ^5.4.0
   uuid: ^4.2.2
   get_it: ^7.6.7
   equatable: ^2.0.5
   dartz: ^0.10.1
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
  
 
 dev_dependencies:

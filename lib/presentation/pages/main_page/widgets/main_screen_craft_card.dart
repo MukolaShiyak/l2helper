@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:l2helper_v2/routes.dart';
-import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
 
 @immutable
 class MainScreenCraftCard extends StatelessWidget {
-  const MainScreenCraftCard({Key? key}) : super(key: key);
+  final String title;
+  final String count;
+  final String imageUrl;
+  const MainScreenCraftCard({
+    Key? key,
+    required this.title,
+    required this.count,
+    required this.imageUrl,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +38,7 @@ class MainScreenCraftCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    context.read<CraftCubit>().state.title,
+                    title,
                     style: TextStyle(
                       fontSize: 18.sp,
                       color: Colors.white,
@@ -38,7 +46,7 @@ class MainScreenCraftCard extends StatelessWidget {
                   ),
                   SizedBox(width: 15.w),
                   Text(
-                    context.read<CraftCubit>().state.count.toString(),
+                    count,
                     style: TextStyle(
                       fontSize: 18.sp,
                       color: Colors.white,
@@ -51,9 +59,23 @@ class MainScreenCraftCard extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(25.r),
-                  child: Image.network(
-                    context.read<CraftCubit>().state.imagePath,
-                    fit: BoxFit.contain,
+                  child: CachedNetworkImage(
+                    imageUrl: imageUrl,
+                    placeholder: (context, url) {
+                      return Shimmer.fromColors(
+                        baseColor: Colors.grey,
+                        highlightColor: Colors.white,
+                        child: Image(
+                          image: NetworkImage(url),
+                        ),
+                      );
+                    },
+                    imageBuilder: (context, imageProvider) {
+                      return Image(
+                        image: imageProvider,
+                        fit: BoxFit.contain,
+                      );
+                    },
                   ),
                 ),
               ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:shimmer/shimmer.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:l2helper_v2/domain/entities/resource.dart';
 import 'package:l2helper_v2/presentation/pages/main_page/widgets/custom_expansion_tile.dart';
 
@@ -54,8 +57,21 @@ class ResourceTile extends StatelessWidget {
       margin: const EdgeInsets.all(8.0),
       child: CustomExpansionTile(
         leading: GestureDetector(
-          child: CircleAvatar(
-            backgroundImage: NetworkImage(resource.image),
+          child: CachedNetworkImage(
+            imageUrl: resource.image,
+            placeholder: (context, url) {
+              return Shimmer.fromColors(
+                  baseColor: Colors.grey,
+                  highlightColor: Colors.white,
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(url),
+                  ));
+            },
+            imageBuilder: (context, imageProvider) {
+              return CircleAvatar(
+                backgroundImage: imageProvider,
+              );
+            },
           ),
           onTap: () => setNewValues([...ids, resource.id]),
         ),
