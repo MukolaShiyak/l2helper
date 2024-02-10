@@ -36,7 +36,7 @@ class _QuantityPageState extends State<QuantityPage> {
   void _clearFieldNavigateHome() async {
     FocusScope.of(context).unfocus(disposition: UnfocusDisposition.scope);
     _controller.clear();
-    await Future.delayed(const Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 250));
 
     if (mounted) {
       Navigator.popUntil(

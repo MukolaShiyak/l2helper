@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:l2helper_v2/domain/entities/weapon.dart';
 import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
 import 'package:l2helper_v2/presentation/shared_widgets/app_bar.dart';
-import 'package:l2helper_v2/presentation/pages/page_with_carousel/carousel_item.dart';
-import 'package:l2helper_v2/presentation/pages/page_with_carousel/carousel_item_indicator.dart';
+import 'package:l2helper_v2/presentation/pages/page_with_carousel/carousel_widget.dart';
 
 class CarouselPage extends StatefulWidget {
   const CarouselPage({Key? key}) : super(key: key);
@@ -18,9 +16,7 @@ class CarouselPage extends StatefulWidget {
 }
 
 class _CarouselPageState extends State<CarouselPage> {
-  int _currentPageIndex = 0;
   Future<List<Weapon>>? _weapons;
-  final CarouselController buttonCarouselController = CarouselController();
 
   @override
   void initState() {
@@ -63,39 +59,7 @@ class _CarouselPageState extends State<CarouselPage> {
                     case ConnectionState.done:
                       if (snapshot.hasData) {
                         final weapons = snapshot.requireData;
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            CarouselSlider(
-                              items: weapons
-                                  .map((weapon) => Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          CarouselItem(
-                                            image: weapon.imageUrl,
-                                            carouselWeapon: weapon,
-                                            title: weapon.weaponName,
-                                            resources: weapon.weaponResources,
-                                            characteristics:
-                                                weapon.characteristics,
-                                          ),
-                                        ],
-                                      ))
-                                  .toList(),
-                              carouselController: buttonCarouselController,
-                              options: CarouselOptions(
-                                viewportFraction: 1,
-                                enableInfiniteScroll: false,
-                                onPageChanged: (index, reason) =>
-                                    setState(() => _currentPageIndex = index),
-                              ),
-                            ),
-                            CarouselItemIndicator(
-                              weapons: weapons,
-                              currentPageIndex: _currentPageIndex,
-                            ),
-                          ],
-                        );
+                        return CarouselWidget(weapons: weapons);
                       } else {
                         return const Center(
                           child: Text('No data'),
