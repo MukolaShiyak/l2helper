@@ -2,48 +2,54 @@ part of 'craft_cubit.dart';
 
 class CraftState {
   final int count;
-  final String title;
-  final String imagePath;
-  final List<Resource>? resouceModel;
+  final Weapon? carouselSelectedWeapon;
+  final Weapon? selectedWeaponForCraft;
 
   CraftState({
-    required this.title,
     required this.count,
-    required this.imagePath,
-    required this.resouceModel,
+    this.carouselSelectedWeapon,
+    this.selectedWeaponForCraft,
   });
 
   CraftState copyWith({
     int? count,
-    String? title,
-    String? imagePath,
-    List<Resource>? resouceModel,
+    Weapon? carouselSelectedWeapon,
+    Weapon? selectedWeaponForCraft,
   }) {
     return CraftState(
-      title: title ?? this.title,
       count: count ?? this.count,
-      imagePath: imagePath ?? this.imagePath,
-      resouceModel: resouceModel ?? this.resouceModel,
+      carouselSelectedWeapon:
+          carouselSelectedWeapon ?? this.carouselSelectedWeapon,
+      selectedWeaponForCraft:
+          selectedWeaponForCraft ?? this.selectedWeaponForCraft,
     );
   }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'title': title,
       'count': count,
-      'imagePath': imagePath,
-      'resouceModel': resouceModel?.map((e) => e.toMap()).toList(),
+      'carouselSelectedWeapon': carouselSelectedWeapon?.toJson(),
+      'selectedWeaponForCraft': selectedWeaponForCraft?.toJson(),
     };
   }
 
   factory CraftState.fromMap(Map<String, dynamic> map) {
+    final carouselSelectedWeaponJson = map['carouselSelectedWeapon'] != null
+        ? cv.jsonDecode(map['carouselSelectedWeapon'])
+        : null;
+
+    final selectedWeaponForCraftJson = map['selectedWeaponForCraft'] != null
+        ? cv.jsonDecode(map['selectedWeaponForCraft'])
+        : null;
+
     return CraftState(
       count: map['count'] as int,
-      title: map['title'] as String,
-      imagePath: map['imagePath'] as String,
-      resouceModel: (map['resouceModel'] as List<dynamic>)
-          .map((e) => Resource.fromMap(e))
-          .toList(),
+      carouselSelectedWeapon: carouselSelectedWeaponJson != null
+          ? Weapon.fromJson(carouselSelectedWeaponJson)
+          : null,
+      selectedWeaponForCraft: selectedWeaponForCraftJson != null
+          ? Weapon.fromJson(selectedWeaponForCraftJson)
+          : null,
     );
   }
   String toJson() => cv.json.encode(toMap());
@@ -54,5 +60,5 @@ class CraftState {
 
   @override
   String toString() =>
-      'CraftState(resouceModel: $resouceModel, count: $count, title: $title)';
+      'CraftState(selectedWeaponForCraft: Weapon(weaponName: ${selectedWeaponForCraft?.weaponName}), count: $count)';
 }

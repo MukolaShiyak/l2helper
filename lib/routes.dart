@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:l2helper_v2/presentation/pages/main_page/main_page.dart';
 import 'package:l2helper_v2/presentation/pages/craft_page/craft_page.dart';
-import 'package:l2helper_v2/presentation/pages/count_page/count_page.dart';
+import 'package:l2helper_v2/presentation/pages/count_page/quantity_page.dart';
 import 'package:l2helper_v2/presentation/pages/page_with_carousel/carousel_page.dart';
 
 class Keys {

@@ -18,21 +18,40 @@ class CraftPage extends StatelessWidget {
         return Scaffold(
           appBar: CustomAppBar(
             onBackTap: () => Navigator.of(context).pop(),
-            appBarTitle: context.read<CraftCubit>().state.title,
+            appBarTitle: context
+                .read<CraftCubit>()
+                .state
+                .selectedWeaponForCraft!
+                .weaponName,
           ),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 10.h),
-              Expanded(
-                child: ResourceWidget(
-                  craftCount: state.count,
-                  resources: state.resouceModel ?? [],
-                  setNewValues: (ids) =>
-                      context.read<CraftCubit>().setNewValuesToState(ids),
-                ),
+          body: Container(
+            height: 1.sh,
+            width: 1.sw,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.purple.shade100,
+                  Colors.black,
+                ],
               ),
-            ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 10.h),
+                Expanded(
+                  child: ResourceWidget(
+                    craftCount: state.count,
+                    resources:
+                        state.selectedWeaponForCraft?.weaponResources ?? [],
+                    setNewValues: (ids) =>
+                        context.read<CraftCubit>().setNewValuesToState(ids),
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },

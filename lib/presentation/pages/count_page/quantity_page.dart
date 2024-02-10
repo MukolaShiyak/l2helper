@@ -70,7 +70,16 @@ class _QuantityPageState extends State<QuantityPage> {
       body: Container(
         height: 1.sh,
         width: 1.sw,
-        color: Colors.black26,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.purple.shade100,
+              Colors.black,
+            ],
+          ),
+        ),
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

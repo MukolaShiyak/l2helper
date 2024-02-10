@@ -15,9 +15,8 @@ class CraftCubit extends HydratedCubit<CraftState> {
     this._getWeapons,
   ) : super(CraftState(
           count: 1,
-          title: '',
-          imagePath: '',
-          resouceModel: [],
+          carouselSelectedWeapon: null,
+          selectedWeaponForCraft: null,
         ));
 
   Future<List<Weapon>> getWeapons() async {
@@ -33,14 +32,10 @@ class CraftCubit extends HydratedCubit<CraftState> {
   }
 
   Future<void> setResourcesToState({
-    required String title,
-    required String imagePath,
-    required List<Resource>? resouces,
+    required Weapon carouselSelectedWeapon,
   }) async {
     emit(state.copyWith(
-      title: title,
-      imagePath: imagePath,
-      resouceModel: resouces,
+      carouselSelectedWeapon: carouselSelectedWeapon,
     ));
   }
 
@@ -184,9 +179,8 @@ class CraftCubit extends HydratedCubit<CraftState> {
     resources.removeAt(indexOfResource);
     resources.insert(indexOfResource, newRes);
     emit(state.copyWith(
-      title: state.title,
-      resouceModel: resources,
-      imagePath: state.imagePath,
+      selectedWeaponForCraft:
+          state.selectedWeaponForCraft?.updateResourceProgress(resources),
     ));
   }
 
@@ -214,14 +208,13 @@ class CraftCubit extends HydratedCubit<CraftState> {
     }
 
     emit(state.copyWith(
-      title: state.title,
-      resouceModel: resources,
-      imagePath: state.imagePath,
+      selectedWeaponForCraft:
+          state.selectedWeaponForCraft?.updateResourceProgress(resources),
     ));
   }
 
   Future<void> setNewValuesToState(List<String> ids) async {
-    final resources = [...?state.resouceModel];
+    final resources = [...?state.selectedWeaponForCraft?.weaponResources];
     final nestingQuantity = ids.length;
     if (nestingQuantity == 1) {
       _processFirstLevelNesting(resources, ids);
@@ -237,6 +230,7 @@ class CraftCubit extends HydratedCubit<CraftState> {
   Future<void> setCount({required int craftCount}) async {
     emit(state.copyWith(
       count: craftCount,
+      selectedWeaponForCraft: state.carouselSelectedWeapon,
     ));
   }
 
@@ -249,9 +243,8 @@ class CraftCubit extends HydratedCubit<CraftState> {
     } catch (e) {
       return CraftState(
         count: 1,
-        title: '',
-        imagePath: '',
-        resouceModel: [],
+        carouselSelectedWeapon: null,
+        selectedWeaponForCraft: null,
       );
     }
   }
