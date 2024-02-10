@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:l2helper_v2/routes.dart';
-import 'package:l2helper_v2/data/models/characteristics_model.dart';
-import 'package:l2helper_v2/presentation/shared_widgets/weapon_card.dart';
+import 'package:l2helper/routes.dart';
+import 'package:l2helper/data/models/characteristics_model.dart';
+import 'package:l2helper/presentation/shared_widgets/weapon_card.dart';
 
 @immutable
 class MainScreenCraftCard extends StatelessWidget {

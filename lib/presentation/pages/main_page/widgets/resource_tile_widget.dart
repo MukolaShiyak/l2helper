@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import 'package:l2helper_v2/domain/entities/resource.dart';
-import 'package:l2helper_v2/presentation/pages/main_page/widgets/custom_expansion_tile.dart';
+import 'package:l2helper/domain/entities/resource.dart';
+import 'package:l2helper/presentation/pages/main_page/widgets/custom_expansion_tile.dart';
 
 @immutable
 class ResourceTile extends StatelessWidget {

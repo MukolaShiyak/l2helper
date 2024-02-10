@@ -1,4 +1,4 @@
-package com.example.l2helper_v2
+package com.example.l2helper
 
 import io.flutter.embedding.android.FlutterActivity
 

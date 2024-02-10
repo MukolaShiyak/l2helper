@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import 'package:l2helper_v2/domain/entities/weapon.dart';
-import 'package:l2helper_v2/presentation/pages/page_with_carousel/carousel_item.dart';
+import 'package:l2helper/domain/entities/weapon.dart';
+import 'package:l2helper/presentation/pages/page_with_carousel/carousel_item.dart';
 
 class CarouselWidget extends StatefulWidget {
   final List<Weapon> weapons;

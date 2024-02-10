@@ -4,8 +4,8 @@ import 'package:shimmer/shimmer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import 'package:l2helper_v2/data/models/characteristics_model.dart';
-import 'package:l2helper_v2/presentation/shared_widgets/characteristics_widget.dart';
+import 'package:l2helper/data/models/characteristics_model.dart';
+import 'package:l2helper/presentation/shared_widgets/characteristics_widget.dart';
 
 class WeaponCard extends StatelessWidget {
   final String title, imageUrl;

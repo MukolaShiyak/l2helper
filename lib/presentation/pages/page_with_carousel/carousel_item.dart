@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:l2helper_v2/domain/entities/weapon.dart';
+import 'package:l2helper/domain/entities/weapon.dart';
 
-import 'package:l2helper_v2/routes.dart';
-import 'package:l2helper_v2/domain/entities/resource.dart';
-import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
-import 'package:l2helper_v2/data/models/characteristics_model.dart';
-import 'package:l2helper_v2/presentation/shared_widgets/weapon_card.dart';
+import 'package:l2helper/routes.dart';
+import 'package:l2helper/domain/entities/resource.dart';
+import 'package:l2helper/presentation/cubit/craft_cubit.dart';
+import 'package:l2helper/data/models/characteristics_model.dart';
+import 'package:l2helper/presentation/shared_widgets/weapon_card.dart';
 
 @immutable
 class CarouselItem extends StatelessWidget {

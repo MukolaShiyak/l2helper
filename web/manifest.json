@@ -1,6 +1,6 @@
 {
-    "name": "l2helper_v2",
-    "short_name": "l2helper_v2",
+    "name": "l2helper",
+    "short_name": "l2helper",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

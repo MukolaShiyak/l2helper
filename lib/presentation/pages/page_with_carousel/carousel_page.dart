@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:l2helper_v2/domain/entities/weapon.dart';
-import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
-import 'package:l2helper_v2/presentation/shared_widgets/app_bar.dart';
-import 'package:l2helper_v2/presentation/pages/page_with_carousel/carousel_widget.dart';
+import 'package:l2helper/domain/entities/weapon.dart';
+import 'package:l2helper/presentation/cubit/craft_cubit.dart';
+import 'package:l2helper/presentation/shared_widgets/app_bar.dart';
+import 'package:l2helper/presentation/pages/page_with_carousel/carousel_widget.dart';
 
 class CarouselPage extends StatefulWidget {
   const CarouselPage({Key? key}) : super(key: key);

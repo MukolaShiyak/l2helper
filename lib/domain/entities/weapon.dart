@@ -2,8 +2,8 @@ import 'dart:convert' as cv;
 
 import 'package:flutter/foundation.dart' show immutable;
 
-import 'package:l2helper_v2/domain/entities/resource.dart';
-import 'package:l2helper_v2/data/models/characteristics_model.dart';
+import 'package:l2helper/domain/entities/resource.dart';
+import 'package:l2helper/data/models/characteristics_model.dart';
 
 @immutable
 class Weapon {

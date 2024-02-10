@@ -2,9 +2,9 @@ import 'dart:convert' as cv;
 
 import 'package:dio/dio.dart';
 
-import 'package:l2helper_v2/data/constants.dart';
-import 'package:l2helper_v2/data/exception.dart';
-import 'package:l2helper_v2/data/models/weapon_model.dart';
+import 'package:l2helper/data/constants.dart';
+import 'package:l2helper/data/exception.dart';
+import 'package:l2helper/data/models/weapon_model.dart';
 
 abstract class WeaponsApi {
   Future<List<WeaponModel>> getWeapons();

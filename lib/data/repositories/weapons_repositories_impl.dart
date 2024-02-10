@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 
-import 'package:l2helper_v2/data/failure.dart';
-import 'package:l2helper_v2/data/exception.dart';
-import 'package:l2helper_v2/domain/entities/weapon.dart';
-import 'package:l2helper_v2/data/datasource/weapons_api.dart';
-import 'package:l2helper_v2/repositories/weapons_repository.dart';
+import 'package:l2helper/data/failure.dart';
+import 'package:l2helper/data/exception.dart';
+import 'package:l2helper/domain/entities/weapon.dart';
+import 'package:l2helper/data/datasource/weapons_api.dart';
+import 'package:l2helper/repositories/weapons_repository.dart';
 
 class WeaponsRepositoryImpl implements WeaponsRepository {
   final WeaponsApi weaponsApi;

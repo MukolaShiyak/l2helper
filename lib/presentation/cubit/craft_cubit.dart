@@ -2,9 +2,9 @@ import 'dart:convert' as cv;
 
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 
-import 'package:l2helper_v2/usecase/get_weapons.dart';
-import 'package:l2helper_v2/domain/entities/weapon.dart';
-import 'package:l2helper_v2/domain/entities/resource.dart';
+import 'package:l2helper/usecase/get_weapons.dart';
+import 'package:l2helper/domain/entities/weapon.dart';
+import 'package:l2helper/domain/entities/resource.dart';
 
 part 'craft_state.dart';
 

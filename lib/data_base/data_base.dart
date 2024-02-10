@@ -1,4 +1,4 @@
-import 'package:l2helper_v2/data/models/resource_model.dart';
+import 'package:l2helper/data/models/resource_model.dart';
 
 // DB DB DB
 List<ResourceModel> draconicBow = [

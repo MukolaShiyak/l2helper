@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:l2helper_v2/domain/entities/resource.dart';
-import 'package:l2helper_v2/presentation/pages/main_page/widgets/resource_tile_widget.dart';
+import 'package:l2helper/domain/entities/resource.dart';
+import 'package:l2helper/presentation/pages/main_page/widgets/resource_tile_widget.dart';
 
 @immutable
 class ResourceWidget extends StatelessWidget {

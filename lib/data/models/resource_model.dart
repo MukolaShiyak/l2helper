@@ -3,7 +3,7 @@ import 'dart:convert' as cv;
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
-import 'package:l2helper_v2/domain/entities/resource.dart';
+import 'package:l2helper/domain/entities/resource.dart';
 
 const uuid = Uuid();
 

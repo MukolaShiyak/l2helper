@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:l2helper_v2/routes.dart';
-import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
-import 'package:l2helper_v2/presentation/shared_widgets/app_bar.dart';
-import 'package:l2helper_v2/presentation/pages/main_page/widgets/main_screen_craft_card.dart';
+import 'package:l2helper/routes.dart';
+import 'package:l2helper/presentation/cubit/craft_cubit.dart';
+import 'package:l2helper/presentation/shared_widgets/app_bar.dart';
+import 'package:l2helper/presentation/pages/main_page/widgets/main_screen_craft_card.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);

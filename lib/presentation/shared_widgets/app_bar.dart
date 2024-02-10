@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:l2helper_v2/utils/app_colors.dart';
+import 'package:l2helper/utils/app_colors.dart';
 
 @immutable
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

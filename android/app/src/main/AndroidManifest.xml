@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.l2helper_v2">
+    package="com.example.l2helper">
 
     <uses-permission android:name="android.permission.INTERNET" />
     
    <application
-        android:label="l2helper_v2"
+        android:label="L2 Helper"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

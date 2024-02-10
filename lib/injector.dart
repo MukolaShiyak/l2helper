@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-import 'package:l2helper_v2/usecase/get_weapons.dart';
-import 'package:l2helper_v2/data/datasource/weapons_api.dart';
-import 'package:l2helper_v2/presentation/cubit/craft_cubit.dart';
-import 'package:l2helper_v2/repositories/weapons_repository.dart';
-import 'package:l2helper_v2/data/repositories/weapons_repositories_impl.dart';
+import 'package:l2helper/usecase/get_weapons.dart';
+import 'package:l2helper/data/datasource/weapons_api.dart';
+import 'package:l2helper/presentation/cubit/craft_cubit.dart';
+import 'package:l2helper/repositories/weapons_repository.dart';
+import 'package:l2helper/data/repositories/weapons_repositories_impl.dart';
 
 final locator = GetIt.instance;
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:l2helper_v2/data/models/characteristics_model.dart';
+import 'package:l2helper/data/models/characteristics_model.dart';
 
 class CharacteristicsWidget extends StatelessWidget {
   const CharacteristicsWidget({
