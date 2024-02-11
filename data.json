@@ -952,5 +952,258 @@
         "isComplete": false
       }
     ]
+  },
+  {
+    "imageUrl": "https://github.com/MukolaShiyak/l2helper/blob/master/images/dark_legion.png?raw=true",
+    "weaponName": "Dark Legion's Edge",
+    "characteristics": {
+      "type": "Type: One handed",
+      "crystals": "A-Cry: 2160",
+      "soul_shots": "SoulShots: 1",
+      "magical_damage": "M.Atk: 114",
+      "physical_damage": "P.Atk: 232"
+    },
+    "weaponResources": [
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/recipeA.png?raw=true",
+        "quantity": "1",
+        "title": "Recipe: Dark Legion's Edge(60%)",
+        "isComplete": false
+      },
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/blade.jpg?raw=true",
+        "quantity": "14",
+        "title": "Dark Legions Edge Blade",
+        "isComplete": false,
+        "resources": [
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/artisansFrame.jpg?raw=true",
+            "quantity": "2",
+            "title": "Artisans Frame",
+            "isComplete": false,
+            "resources": [
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/steelMold.png?raw=true",
+                "quantity": "1",
+                "title": "Steel Mold",
+                "isComplete": false,
+                "resources": [
+                  {
+                    "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/braidedHemp.jpg?raw=true",
+                    "quantity": "5",
+                    "title": "Braided Hemp",
+                    "isComplete": false
+                  },
+                  {
+                    "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Iron_Ore.jpg?raw=true",
+                    "quantity": "5",
+                    "title": "Iron Ore",
+                    "isComplete": false
+                  },
+                  {
+                    "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/coal.png?raw=true",
+                    "quantity": "5",
+                    "title": "Coal",
+                    "isComplete": false
+                  }
+                ]
+              },
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/adamantinNugget.jpg?raw=true",
+                "quantity": "10",
+                "title": "Adamantite Nugget",
+                "isComplete": false
+              },
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Varnish_of_Purity.jpg?raw=true",
+                "quantity": "5",
+                "title": "Varnish of Purity",
+                "isComplete": false,
+                "resources": [
+                  {
+                    "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Stone_of_Purity.jpg?raw=true",
+                    "quantity": "1",
+                    "title": "Stone of Purity",
+                    "isComplete": false
+                  },
+                  {
+                    "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Coarse_Bone_Powder.jpg?raw=true",
+                    "quantity": "3",
+                    "title": "Coarse Bone Powder",
+                    "isComplete": false
+                  },
+                  {
+                    "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Varnish.jpg?raw=true",
+                    "quantity": "3",
+                    "title": "Varnish",
+                    "isComplete": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Mold_Hardener.jpg?raw=true",
+            "quantity": "20",
+            "title": "Mold Hardener",
+            "isComplete": false
+          },
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/enria.jpg?raw=true",
+            "quantity": "5",
+            "title": "Enria",
+            "isComplete": false
+          }
+        ]
+      },
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/ma.jpg?raw=true",
+        "quantity": "156",
+        "title": "Mithril Alloy",
+        "isComplete": false,
+        "resources": [
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Mithril_Ore.jpg?raw=true",
+            "quantity": "1",
+            "title": "Mithril Ore",
+            "isComplete": false
+          },
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Varnish_of_Purity.jpg?raw=true",
+            "quantity": "1",
+            "title": "Varnish of Purity",
+            "isComplete": false,
+            "resources": [
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Stone_of_Purity.jpg?raw=true",
+                "quantity": "1",
+                "title": "Stone of Purity",
+                "isComplete": false
+              },
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Coarse_Bone_Powder.jpg?raw=true",
+                "quantity": "3",
+                "title": "Coarse Bone Powder",
+                "isComplete": false
+              },
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Varnish.jpg?raw=true",
+                "quantity": "3",
+                "title": "Varnish",
+                "isComplete": false
+              }
+            ]
+          },
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Steel.jpg?raw=true",
+            "quantity": "2",
+            "title": "Steel",
+            "isComplete": false,
+            "resources": [
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Iron_Ore.jpg?raw=true",
+                "quantity": "5",
+                "title": "Iron Ore",
+                "isComplete": false
+              },
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Varnish.jpg?raw=true",
+                "quantity": "5",
+                "title": "Varnish",
+                "isComplete": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/sc.jpg?raw=true",
+        "quantity": "156",
+        "title": "Synthetic Cokes",
+        "isComplete": false,
+        "resources": [
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Oriharukon_Ore.jpg?raw=true",
+            "quantity": "1",
+            "title": "Oriharukon Ore",
+            "isComplete": false
+          },
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Cokes.jpg?raw=true",
+            "quantity": "3",
+            "title": "Cokes",
+            "isComplete": false,
+            "resources": [
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/coal.png?raw=true",
+                "quantity": "3",
+                "title": "coal",
+                "isComplete": false
+              },
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/charcoal.png?raw=true",
+                "quantity": "3",
+                "title": "Charcoal",
+                "isComplete": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/dmp.jpg?raw=true",
+        "quantity": "78",
+        "title": "Durable Metal Plate",
+        "isComplete": false,
+        "resources": [
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Metallic_Thread.jpg?raw=true",
+            "quantity": "5",
+            "title": "Metallic Thread",
+            "isComplete": false
+          },
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/Mithril_Ore.jpg?raw=true",
+            "quantity": "5",
+            "title": "Mithril Ore",
+            "isComplete": false
+          }
+        ]
+      },
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/enria.jpg?raw=true",
+        "quantity": "78",
+        "title": "Enria",
+        "isComplete": false
+      },
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/crystalA.png?raw=true",
+        "quantity": "161",
+        "title": "Crystal A-Grade",
+        "isComplete": false
+      },
+      {
+        "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/gemA.png?raw=true",
+        "quantity": "74",
+        "title": "Gemstone A",
+        "isComplete": false,
+        "resources": [
+          {
+            "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/green_seal_stone.jpg?raw=true",
+            "quantity": "6000",
+            "title": "Green Seal Stone",
+            "isComplete": false,
+            "resources": [
+              {
+                "image": "https://github.com/MukolaShiyak/l2helper/blob/master/images/ancient-adena.png?raw=true",
+                "quantity": "5",
+                "title": "Ancient Adena",
+                "isComplete": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
