@@ -5,9 +5,11 @@ import 'package:l2helper/utils/app_colors.dart';
 @immutable
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String appBarTitle;
+  final List<Widget>? actions;
   final VoidCallback? onBackTap;
   const CustomAppBar({
     super.key,
+    this.actions,
     this.onBackTap,
     required this.appBarTitle,
   });
@@ -28,6 +30,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         appBarTitle,
         style: const TextStyle(color: Colors.white),
       ),
+      actions: actions,
       centerTitle: true,
       shadowColor: AppColors.black54,
       backgroundColor: AppColors.black54,

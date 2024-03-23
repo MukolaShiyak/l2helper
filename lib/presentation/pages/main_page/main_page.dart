@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:l2helper/routes.dart';
 import 'package:l2helper/presentation/cubit/craft_cubit.dart';
 import 'package:l2helper/presentation/shared_widgets/app_bar.dart';
+import 'package:l2helper/presentation/pages/main_page/widgets/complete_craft_dialog.dart';
 import 'package:l2helper/presentation/pages/main_page/widgets/main_screen_craft_card.dart';
 
 class MainPage extends StatelessWidget {
@@ -14,7 +15,20 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(appBarTitle: 'L2 helper'),
+      appBar: CustomAppBar(
+        appBarTitle: 'L2 Craft Helper',
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed(Routes.historyPage);
+            },
+            icon: const Icon(
+              Icons.history,
+              color: Colors.white,
+            ),
+          )
+        ],
+      ),
       floatingActionButton: Container(
         decoration: BoxDecoration(
           boxShadow: [
@@ -26,12 +40,18 @@ class MainPage extends StatelessWidget {
           ],
           borderRadius: BorderRadius.circular(25.r),
         ),
-        child: FloatingActionButton(
-          backgroundColor: Colors.black87,
-          onPressed: () {
-            Navigator.of(context).pushNamed(Routes.carouselPage);
-          },
-          child: const Icon(Icons.add),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(25.r),
+          child: FloatingActionButton(
+            backgroundColor: Colors.black87,
+            onPressed: () {
+              Navigator.of(context).pushNamed(Routes.carouselPage);
+            },
+            child: Icon(
+              Icons.add,
+              color: Colors.purple.shade100,
+            ),
+          ),
         ),
       ),
       body: Container(
@@ -53,13 +73,27 @@ class MainPage extends StatelessWidget {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  if (state.selectedWeaponForCraft != null)
-                    MainScreenCraftCard(
-                      count: state.count.toString(),
-                      title: state.selectedWeaponForCraft!.weaponName,
-                      imageUrl: state.selectedWeaponForCraft!.imageUrl,
-                      characteristics:
-                          state.selectedWeaponForCraft!.characteristics,
+                  if (state.selectedWeaponForCraft != null && state.count != 0)
+                    Dismissible(
+                      key: const Key('main_card'),
+                      confirmDismiss: (direction) async {
+                        return await showDialog<bool>(
+                          barrierDismissible: false,
+                          context: context,
+                          builder: (context) {
+                            return const CompleteCraftDialog();
+                          },
+                        );
+                      },
+                      child: MainScreenCraftCard(
+                        count: state.count.toString(),
+                        title: state.selectedWeaponForCraft!.weaponName,
+                        imageUrl: state.selectedWeaponForCraft!.imageUrl,
+                        onTap: () =>
+                            Navigator.of(context).pushNamed(Routes.craftPage),
+                        characteristics:
+                            state.selectedWeaponForCraft!.characteristics,
+                      ),
                     ),
                 ],
               );

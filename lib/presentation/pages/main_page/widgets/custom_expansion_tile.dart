@@ -666,6 +666,11 @@ class _CustomExpansionTileState extends State<CustomExpansionTile>
                 subtitle: widget.subtitle,
                 trailing: widget.children.isNotEmpty
                     ? widget.trailing ?? _buildTrailingIcon(context)
+                    // GestureDetector(
+                    //     onTap: _handleTap,
+                    //     behavior: HitTestBehavior.opaque,
+                    //     child: widget.trailing ?? _buildTrailingIcon(context),
+                    //   )
                     : null,
               ),
             ),

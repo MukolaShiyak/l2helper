@@ -33,6 +33,7 @@ class _CarouselWidgetState extends State<CarouselWidget> {
         AspectRatio(
           aspectRatio: 16 / 9,
           child: PageView.builder(
+            clipBehavior: Clip.none,
             itemBuilder: (context, index) {
               return Column(
                 mainAxisSize: MainAxisSize.min,

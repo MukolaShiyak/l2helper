@@ -32,53 +32,65 @@ class WeaponCard extends StatelessWidget {
         color: Colors.black26,
         borderRadius: BorderRadius.circular(25.r),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      clipBehavior: Clip.none,
+      child: Stack(
+        clipBehavior: Clip.none,
         children: [
-          SizedBox(height: 15.h),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                _title(),
-                style: TextStyle(
-                  fontSize: 20.sp,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25.r),
-                child: SizedBox(
-                  height: 40.h,
-                  child: CachedNetworkImage(
-                    imageUrl: imageUrl,
-                    placeholder: (context, url) {
-                      return Shimmer.fromColors(
-                        baseColor: Colors.grey,
-                        highlightColor: Colors.white,
-                        child: Image(
-                          image: NetworkImage(url),
-                          height: 60.h,
-                          fit: BoxFit.contain,
-                        ),
-                      );
-                    },
-                    imageBuilder: (context, imageProvider) {
-                      return Image(
-                        image: imageProvider,
-                        fit: BoxFit.contain,
-                      );
-                    },
+              SizedBox(height: 20.h),
+              Center(
+                child: Text(
+                  _title(),
+                  maxLines: 2,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20.sp,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
+              SizedBox(height: 15.h),
+              CharacteristicsWidget(characteristics: characteristics),
+              SizedBox(height: 15.h),
             ],
           ),
-          SizedBox(height: 15.h),
-          CharacteristicsWidget(characteristics: characteristics),
-          SizedBox(height: 15.h),
+          Positioned(
+            right: -10.w,
+            bottom: -20.h,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50.r),
+              child: SizedBox(
+                height: 80.h,
+                child: CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  placeholder: (context, url) {
+                    return Shimmer.fromColors(
+                      baseColor: Colors.grey,
+                      highlightColor: Colors.white,
+                      child: Container(
+                        height: 80.h,
+                        width: 80.h,
+                        decoration: const BoxDecoration(
+                          color: Colors.grey,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    );
+                  },
+                  imageBuilder: (context, imageProvider) {
+                    return Image(
+                      image: imageProvider,
+                      fit: BoxFit.contain,
+                    );
+                  },
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

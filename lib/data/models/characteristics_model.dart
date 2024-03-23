@@ -18,6 +18,16 @@ class CharacteristicsModel {
     required this.physicalDamage,
   });
 
+  static CharacteristicsModel emptyModel() {
+    return CharacteristicsModel(
+      type: '',
+      crystals: '',
+      soulShots: '',
+      magicalDamage: '',
+      physicalDamage: '',
+    );
+  }
+
   Map<String, dynamic> toMap() {
     return {
       'type': type,

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "9286299092",
+    "project_id": "l2-craft-helper",
+    "storage_bucket": "l2-craft-helper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9286299092:android:8a049e6b3a04daed65fa41",
+        "android_client_info": {
+          "package_name": "com.example.l2helper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDucUTwoXxPfjsNp9UFJX7YmFzuPO24cPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

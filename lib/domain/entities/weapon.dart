@@ -19,6 +19,15 @@ class Weapon {
     required this.characteristics,
   });
 
+  static Weapon emptyWeapon() {
+    return Weapon(
+      imageUrl: '',
+      weaponName: '',
+      weaponResources: const [],
+      characteristics: CharacteristicsModel.emptyModel(),
+    );
+  }
+
   Map<String, dynamic> _toMap() {
     return {
       'imageUrl': imageUrl,

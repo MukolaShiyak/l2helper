@@ -1,20 +1,31 @@
 import 'dart:convert' as cv;
 
+import 'package:uuid/uuid.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:l2helper/usecase/analitycs.dart';
 
 import 'package:l2helper/usecase/get_weapons.dart';
+import 'package:l2helper/usecase/sound_effect.dart';
 import 'package:l2helper/domain/entities/weapon.dart';
 import 'package:l2helper/domain/entities/resource.dart';
+import 'package:l2helper/data/models/craft_history_model.dart';
 
 part 'craft_state.dart';
 
 class CraftCubit extends HydratedCubit<CraftState> {
   final GetWeapons _getWeapons;
+  final SoundEffect _soundEffect;
+  final Analytics _analytics;
 
   CraftCubit(
     this._getWeapons,
+    this._soundEffect,
+    this._analytics,
   ) : super(CraftState(
           count: 1,
+          craftHistory: [],
+          selectedIdsForDelete: [],
+          isMultiDeleteEnabled: false,
           carouselSelectedWeapon: null,
           selectedWeaponForCraft: null,
         ));
@@ -28,6 +39,52 @@ class CraftCubit extends HydratedCubit<CraftState> {
       (data) {
         return data;
       },
+    );
+  }
+
+  void changeMultiDeleteState({String? id}) {
+    if (!state.isMultiDeleteEnabled &&
+        !state.selectedIdsForDelete.contains(id) &&
+        id != null) {
+      final newIdsList = [...state.selectedIdsForDelete];
+      newIdsList.add(id);
+      emit(
+        state.copyWith(
+          selectedIdsForDelete: newIdsList,
+          isMultiDeleteEnabled: !state.isMultiDeleteEnabled,
+        ),
+      );
+    } else {
+      emit(state.copyWith(
+        selectedIdsForDelete: [],
+        isMultiDeleteEnabled: !state.isMultiDeleteEnabled,
+      ));
+    }
+  }
+
+  void addIdForDelete(String id) {
+    if (state.selectedIdsForDelete.contains(id)) {
+      final newList = [...state.selectedIdsForDelete];
+      newList.removeWhere((idl) => idl == id);
+      emit(state.copyWith(selectedIdsForDelete: newList));
+    } else {
+      final newList = [...state.selectedIdsForDelete];
+      newList.add(id);
+      emit(state.copyWith(selectedIdsForDelete: newList));
+    }
+  }
+
+  void deleteSelectedCards() {
+    final newHistoryList = [...state.craftHistory];
+    for (var id in state.selectedIdsForDelete) {
+      newHistoryList.removeWhere((historyCraft) => historyCraft.id == id);
+    }
+    emit(
+      state.copyWith(
+        selectedIdsForDelete: [],
+        isMultiDeleteEnabled: false,
+        craftHistory: newHistoryList,
+      ),
     );
   }
 
@@ -225,12 +282,46 @@ class CraftCubit extends HydratedCubit<CraftState> {
         nestingQuantity: nestingQuantity,
       );
     }
+    _soundEffect.makeSound();
   }
 
   Future<void> setCount({required int craftCount}) async {
     emit(state.copyWith(
       count: craftCount,
       selectedWeaponForCraft: state.carouselSelectedWeapon,
+    ));
+
+    final eventName =
+        state.selectedWeaponForCraft?.weaponName.split(' ').join('_');
+
+    print('eventName: Add_Craft_${eventName}_$craftCount');
+
+    _analytics.recordEvent('Add_Craft_${eventName}_$craftCount');
+  }
+
+  Future<void> completeCraft() async {
+    final emptyWeapon = Weapon.emptyWeapon();
+    final craftHistory = [...state.craftHistory];
+    final completedCraft = state.selectedWeaponForCraft;
+    final currentCraftHistory = CraftHistoryModel(
+      id: const Uuid().v4(),
+      weapon: completedCraft!,
+      craftCount: state.count,
+    );
+
+    final eventName = completedCraft.weaponName.split(' ').join('_');
+
+    print('eventName: Complete_Craft_${eventName}_${state.count}');
+
+    _analytics.recordEvent('Complete_Craft_${eventName}_${state.count}');
+
+    // if (completedCraft == null) return;
+    craftHistory.insert(0, currentCraftHistory);
+
+    emit(state.copyWith(
+      count: 0,
+      craftHistory: craftHistory,
+      selectedWeaponForCraft: emptyWeapon,
     ));
   }
 
@@ -243,6 +334,9 @@ class CraftCubit extends HydratedCubit<CraftState> {
     } catch (e) {
       return CraftState(
         count: 1,
+        craftHistory: [],
+        selectedIdsForDelete: [],
+        isMultiDeleteEnabled: false,
         carouselSelectedWeapon: null,
         selectedWeaponForCraft: null,
       );
