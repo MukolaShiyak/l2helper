@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDucUTwoXxPfjsNp9UFJX7YmFzuPO24cPU',
-    appId: '1:9286299092:android:8a049e6b3a04daed65fa41',
+    appId: '1:9286299092:android:b72c50a7065786d365fa41',
     messagingSenderId: '9286299092',
     projectId: 'l2-craft-helper',
     storageBucket: 'l2-craft-helper.appspot.com',
@@ -59,10 +59,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAyeg-25SS_JlkFkA6fJHdyFtIjBAkUTo4',
-    appId: '1:9286299092:ios:207ca9f812679ca765fa41',
+    appId: '1:9286299092:ios:ee0c43a7a303a47f65fa41',
     messagingSenderId: '9286299092',
     projectId: 'l2-craft-helper',
     storageBucket: 'l2-craft-helper.appspot.com',
-    iosBundleId: 'com.example.l2helperV2',
+    iosBundleId: 'l2craft.helper',
   );
 }
