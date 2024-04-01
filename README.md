@@ -13,6 +13,7 @@ A few resources to get you started if this is your first Flutter project:
 
 ## Make Flutter Build apk
  - run `flutter clean && flutter pub get && flutter build apk`
+ - run `flutter clean && flutter pub get && flutter build appbundle`
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:l2helper/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
@@ -10,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'injector.dart' as di;
 import 'package:l2helper/routes.dart';
+import 'package:l2helper/firebase_options.dart';
 import 'package:l2helper/presentation/cubit/craft_cubit.dart';
 
 Future<void> main() async {
