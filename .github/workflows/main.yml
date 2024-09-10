@@ -72,6 +72,10 @@ jobs:
       - name: Check key.properties
         run: cat android/key.properties
 
+      - name: Check android folder
+        run: ls -la android/
+
+
   
       - run: flutter pub get
       - run: flutter build apk --release --split-per-abi
