@@ -37,6 +37,8 @@
   
 on:
     push:
+      tags:
+        - 'v*.*.*'    
       branches:
         - main
         - master
