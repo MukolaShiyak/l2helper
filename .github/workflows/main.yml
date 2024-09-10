@@ -36,9 +36,7 @@
 #           tag: v1.0.0
   
 on:
-    push:
-      tags:
-        - 'v*.*.*'    
+    push: 
       branches:
         - main
         - master
@@ -70,6 +68,10 @@ jobs:
           echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
           echo "storeFile=${{ secrets.KEY_STOREFILE }}" >> android/key.properties
+    
+      - name: Check key.properties
+        run: cat android/key.properties
+
   
       - run: flutter pub get
       - run: flutter build apk --release --split-per-abi
