@@ -1,0 +1,15 @@
+Welcome to 'L2 Craft Helper' – the ultimate companion for every player looking to enhance their crafting skills in the famed MMORPG, Lineage 2. Our app allows you to effortlessly select items for crafting, set quantities, and monitor your progress at every stage.
+
+Features:
+
+ - An intuitive item selection for crafting in Lineage 2.
+ - The ability to specify quantities for crafting, allowing you to scale your 
+   projects to your requirements.
+ - Progress saving for your crafts, so you can easily pick up where you left off 
+   at any time.
+ - A 'crafting history' feature, where you can review all your past crafts, delete 
+   old entries.
+ - A simple and user-friendly interface designed to optimize your Lineage 2 
+   experience.
+
+'L2 Craft Helper' will become an indispensable tool in the hands of every player who values efficiency and harbors great ambitions in the world of crafting. Become a crafting guru with our app today!
